@@ -1,10 +1,9 @@
 # Resalert
+###### This readme is intended to provide a step by step procedure for preparing the Resalert prototype. Information for all necessary hardware and software components is outlined. Moreso, source code along with details of required libraries is detailed to assist in assembly.
 
-## Components
-### Hardware
-The hardware needed for completing the setup is detailed below. Note that not all specs of the Raspberry Pi are noted. Only those components used will be detailed so that an alternative build could use these as minimum system requirements. 
+## Hardware Components
+The hardware needed for completing the setup is detailed below. The main component of the prototype is the Raspberry Pi, pictured below. This System on a Chip CPU is essentially a pocket-sized personal computer. The Pi and other needed hardware is estimated at around $60.00 AUD. Only those components used will be detailed so that an alternative build could use these as minimum system requirements. Note that the 2nd iteration of the Raspberry Pi is also appropriate for building the prototype. 
 
-#### The Board
 ![Photo of the Raspberry Pi Model B](resources/raspberryPiModelB.jpg "Photo of the Raspberry Pi Model B")
 
 * Raspberry Pi Model B
@@ -37,29 +36,35 @@ The hardware needed for completing the setup is detailed below. Note that not al
 * Powered USB Hub (recommended 4)
 * HDMI Cable
 
-### Software
-#### Operating System
-The operating system of choice at the time of build was Raspbian v3.10. To ease installation, it is recommended to make use of NOOBS which rapidly speeds up initial OS configuration. It is assumed that the router is configured and accessible with an Internet connection. To initially configure the OS, it is necessary to:
+
+## Setup
+
+
+### 1 - Prepare Operating System
+The operating system of choice at the time of initial build was Raspbian v3.10. To ease installation, it is recommended to make use of NOOBS which rapidly speeds up OS configuration. It is assumed that the router is configured and accessible with an Internet connection. To initially configure the OS, it is necessary to:
 
 1. Erase and reformat the SD card. There is freely available open source software for accomplishing this task on your existing personal computer. 
 2. Copy the operating system image or NOOBS package to the root directory of the SD card. 
+ 
+### 2 - Setup the Pi Hardware
 3. Attach the core peripherals to the Raspberry Pi.
  1. Connect HDMI display using the HDMI cable
  2. Connect the USB hub 
- 2. Connect the USB keyboard and mouse via the hub
- 3. Connect the USB wifi adapter or router
- 4. 
- 4. Power on the display
- 3. Insert microUSB to power on the device. Verify by seeing the red indicator on the board marked "PWR"
- 3. Follow the on screen setup instructions for OS setup. Ensure SSH is enabled.
+ 3. Connect the USB keyboard and mouse via the hub
+ 4. Connect the USB wifi adapter or router
+ 5. Power on the display
+ 6. Lastly, insert microUSB to power on the device to start the device
 
-1.  install the RPi.GPIO library.
+###  3 - Setup the Pi Software
+1. Follow the on screen setup instructions for OS setup. Ensure SSH is enabled.
+2. Conigure LAN and Internet connection
+3. Download and install RPi.GPIO library
+4. Clone the git repo using the public link:
+		
+		git clone git@github.com:enphnt/resalert.git
 
 
-
-	
-	this is code
-
-## Setup
-### Hardware
-### Software
+### 4 - Run the Program
+1. Run the program, either via SSH or within a terminal, by executing the shell script: 
+			
+		./<absolute/path/to>/alert.sh
