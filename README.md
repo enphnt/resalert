@@ -1,9 +1,12 @@
 # Resalert
+
 ---
 
 ###### **NOTE:**  This readme is intended to provide step by step procedure for preparing the Resalert prototype. Information for all necessary hardware and software components is outlined. Moreso, source code along with details of required libraries is detailed to assist in assembly.
+
 ---
-This repo houses the proposed IoT-enabled information-centric architecture driven approach, which is called here “Resalert”. The Resalert offers emergency IoT-enabled information supply chain architecture pattern and system architecture. Research findings suggests that a RaspberryPi based system prototype could be useful to the effective delivery of emergency information to elderly people.  
+
+This repository houses the proposed IoT-enabled information-centric architecture driven approach, which is called here “Resalert”. The Resalert offers emergency IoT-enabled information supply chain architecture pattern and system architecture. Research findings suggests that a RaspberryPi based system prototype could be useful to the effective delivery of emergency information to elderly people.  
 
 **Keywords:** E-government; Emergency Information Management; Information Architecture; Internet of Things (IoT); Smart Technology
 
