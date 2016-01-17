@@ -30,14 +30,14 @@ The hardware needed for completing the setup is detailed below. The main compone
 * 1000-1500 MCD 5mm Red LED Emitters
 * Pi Cobbler or compatible 16bit breakout board
 * 400-point breadboard (printed circuit board)
-* button
-* Resistor (1kΩ-10kΩ) 
+* Push button switch
+* Resistor (10kΩ) (color bands: brown, black, orange, and gold) 
 
 #### Connectors
 * Ethernet cable or USB wifi adapter
 * microUSB B (Male) to USB A (Female) cable
 * Jumper Wires
-* Ribbon cable (26 pin) for breakout board
+* Ribbon cable (26 pins) for breakout board
 * Powered USB Hub (recommended 4)
 * HDMI Cable
 
@@ -57,8 +57,24 @@ The operating system of choice at the time of initial build was Raspbian v3.10. 
  2. Connect the USB hub 
  3. Connect the USB keyboard and mouse via the hub
  4. Connect the USB wifi adapter or router
- 5. Power on the display
- 6. Lastly, insert microUSB to power on the device to start the device
+5. Power on the display
+6. Insert microUSB to power on the device to start the device
+
+### Setup the Breadboard
+1. Connect the breakout board using Pi Cobbler.
+2. Connect LED lights to the breadboard.
+  	1. Connect pin 25 to breadboard using mare-to-female jumper wire.
+  	2. Connect ground pin to negative power bus on breadboard using male-to-female jumper wire.
+  	3. Connect the LED.
+  		1. Anode side to the same channel as the pin 25 jumper wire.
+  		2. Cathose side to ground power bus.
+	4. Repease these steps connecting pin 18 to the other LED 
+3. Connect the push button switch.
+	1. Insert the push button switch to straddle the middle channel of the breadboard.
+	2. Connect pin 24 to a top terminal for the push button.
+	3. Connect positive power bus to 3v3 pin (Do not use 5V pin. This will damage the device).
+	4. Connect the power bus to one of the top terminals for the push button.
+	5. Using the 10K resistor, connect ground rail to the input side of the push button. 
 
 ###  3 - Setup the Pi Software
 1. Follow the on screen setup instructions for OS setup. Ensure SSH is enabled.
@@ -70,6 +86,8 @@ The operating system of choice at the time of initial build was Raspbian v3.10. 
 
 
 ### 4 - Run the Program
-1. Run the program, either via SSH or within a terminal, by executing the shell script: 
+1. Run the program, either via SSH or within a terminal on the Pi, by executing the shell script: 
 			
 		./<absolute/path/to>/alert.sh
+		
+2. Use the push button to terminate the program manually. 
