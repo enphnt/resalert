@@ -1,5 +1,6 @@
 # Resalert
 ---
+
 ###### **NOTE:**  This readme is intended to provide step by step procedure for preparing the Resalert prototype. Information for all necessary hardware and software components is outlined. Moreso, source code along with details of required libraries is detailed to assist in assembly.
 ---
 This repo houses the proposed IoT-enabled information-centric architecture driven approach, which is called here “Resalert”. The Resalert offers emergency IoT-enabled information supply chain architecture pattern and system architecture. Research findings suggests that a RaspberryPi based system prototype could be useful to the effective delivery of emergency information to elderly people.  
@@ -9,7 +10,11 @@ This repo houses the proposed IoT-enabled information-centric architecture drive
 ## Hardware Components
 The hardware needed for completing the setup is detailed below. The main component of the prototype is the Raspberry Pi, pictured below. This System on a Chip CPU is essentially a pocket-sized personal computer. The Pi and other needed hardware is estimated at around $60.00 AUD. Only those components used will be detailed so that an alternative build could use these as minimum system requirements. Note that the 2nd iteration of the Raspberry Pi is also appropriate for building the prototype. 
 
+<center>
+
 ![Photo of the Raspberry Pi Model B](resources/raspberryPiModelB.jpg "Photo of the Raspberry Pi Model B")
+
+</center>
 
 * Raspberry Pi Model B
  * 32 bit, 700 MHz System on a Chip
@@ -43,25 +48,28 @@ The hardware needed for completing the setup is detailed below. The main compone
 
 
 ## Setup
+The setup is broken down into a precedural sequence which can be followed to rebuild the initial prototype. Use the table to below to get an idea of the overall build. 
 
+<center>
+
+|Overview|
+|---|
+| 1. Preparing the Operating System for Raspberry Pi| 
+| 2. Setting up the Raspberry Pi hardware| 
+| 3. Setting up the break out board and components| 
+| 4. Setting up software and downloading source code| 
+| 5. Running and terminating the program.| 
+
+</center>
 
 ### 1 - Prepare Operating System
 The operating system of choice at the time of initial build was Raspbian v3.10. To ease installation, it is recommended to make use of NOOBS which rapidly speeds up OS configuration. It is assumed that the router is configured and accessible with an Internet connection. To initially configure the OS, it is necessary to:
 
 1. Erase and reformat the SD card. There is freely available open source software for accomplishing this task on your existing personal computer. 
 2. Copy the operating system image or NOOBS package to the root directory of the SD card. 
- 
-### 2 - Setup the Pi Hardware
-3. Attach the core peripherals to the Raspberry Pi.
- 1. Connect HDMI display using the HDMI cable
- 2. Connect the USB hub 
- 3. Connect the USB keyboard and mouse via the hub
- 4. Connect the USB wifi adapter or router
-5. Power on the display
-6. Insert microUSB to power on the device to start the device
 
-### Setup the Breadboard
-1. Connect the breakout board using Pi Cobbler.
+### 2 - Setup for the Breadboard
+1. Connect the breakout board using the Pi Cobbler and ribbon cable.
 2. Connect LED lights to the breadboard.
   	1. Connect pin 25 to breadboard using mare-to-female jumper wire.
   	2. Connect ground pin to negative power bus on breadboard using male-to-female jumper wire.
@@ -76,7 +84,19 @@ The operating system of choice at the time of initial build was Raspbian v3.10. 
 	4. Connect the power bus to one of the top terminals for the push button.
 	5. Using the 10K resistor, connect ground rail to the input side of the push button. 
 
-###  3 - Setup the Pi Software
+ 
+### 3 - Setup for the Pi Hardware
+3. Attach the core peripherals to the Raspberry Pi.
+	1. Insert prepared SD card
+	1. Connect HDMI display using the HDMI cable
+	2. Connect the USB hub 
+	3. Connect the USB keyboard and mouse via the hub
+ 	4. Connect the USB wifi adapter or router
+5. Power on the display
+6. Insert microUSB to power on the device to start the device
+
+
+###  4 - Setup for Software
 1. Follow the on screen setup instructions for OS setup. Ensure SSH is enabled.
 2. Conigure LAN and Internet connection
 3. Download and install RPi.GPIO library
@@ -85,7 +105,7 @@ The operating system of choice at the time of initial build was Raspbian v3.10. 
 		git clone git@github.com:enphnt/resalert.git
 
 
-### 4 - Run the Program
+### 5 - Run the Program
 1. Run the program, either via SSH or within a terminal on the Pi, by executing the shell script: 
 			
 		./<absolute/path/to>/alert.sh
