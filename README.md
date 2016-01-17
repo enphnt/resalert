@@ -1,5 +1,10 @@
 # Resalert
-###### This readme is intended to provide a step by step procedure for preparing the Resalert prototype. Information for all necessary hardware and software components is outlined. Moreso, source code along with details of required libraries is detailed to assist in assembly.
+---
+###### **NOTE:**  This readme is intended to provide step by step procedure for preparing the Resalert prototype. Information for all necessary hardware and software components is outlined. Moreso, source code along with details of required libraries is detailed to assist in assembly.
+---
+This repo houses the proposed IoT-enabled information-centric architecture driven approach, which is called here “Resalert”. The Resalert offers emergency IoT-enabled information supply chain architecture pattern and system architecture. Research findings suggests that a RaspberryPi based system prototype could be useful to the effective delivery of emergency information to elderly people.  
+
+**Keywords:** E-government; Emergency Information Management; Information Architecture; Internet of Things (IoT); Smart Technology
 
 ## Hardware Components
 The hardware needed for completing the setup is detailed below. The main component of the prototype is the Raspberry Pi, pictured below. This System on a Chip CPU is essentially a pocket-sized personal computer. The Pi and other needed hardware is estimated at around $60.00 AUD. Only those components used will be detailed so that an alternative build could use these as minimum system requirements. Note that the 2nd iteration of the Raspberry Pi is also appropriate for building the prototype. 
